@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="square9Lbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="square7Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="square8Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="square6Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="player1Lbl" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="square10Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="square11Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="square12Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="square13Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="square14Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane2" min="-2" pref="432" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="diceLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                      <Component id="rollBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="square16Lbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="square15Lbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="square17Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="square18Lbl" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="player2Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="square5Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <Component id="square4Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+              <Component id="square3Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <Component id="square2Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="square1Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="player1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="player2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="square14Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square13Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square12Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square11Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square10Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="square9Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="square8Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="square15Lbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Component id="square16Lbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="square7Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="square6Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
+                      <Component id="square17Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="square18Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="192" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="rollBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="diceLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="square1Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square3Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square4Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="square5Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="player1Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Player1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="player2Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Player2"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="questionTa">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="square15Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square15"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square16Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square16"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square1Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square2Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square3Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square4Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square5Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square6Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square7Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square8Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square9Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square10Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square11Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square12Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square13Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square13"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square14Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square14"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square17Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square17"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="square18Lbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Square18"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="rollBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Roll"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rollBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="diceLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
