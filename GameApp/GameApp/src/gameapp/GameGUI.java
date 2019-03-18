@@ -6,6 +6,7 @@
 package gameapp;
 
 import java.util.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -239,10 +240,12 @@ public class GameGUI extends javax.swing.JFrame {
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
         // TODO add your handling code here:
         Random rd=new Random();
-        int Random=0;
-        Random=rd.nextInt(6)+1;
+        int result=rd.nextInt(6);
+        result++;
+        
+        JOptionPane.showMessageDialog(null, "You rolled a "+result+". Please advance to your square");
         //switch
-        switch(Random){
+        /*switch(result){
             case 1:
                 diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice1.png")));
                 break;
@@ -261,7 +264,8 @@ public class GameGUI extends javax.swing.JFrame {
             case 6:
                 diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice6.png")));
                 break;
-        }
+        }*/
+                           
     }//GEN-LAST:event_rollBtnActionPerformed
 
     /**
