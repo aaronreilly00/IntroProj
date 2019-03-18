@@ -20,20 +20,26 @@ public class DBConnection {
         Statement myStmt = null;
         ResultSet myRs = null;
     
-        String user = "";
-        String pass = "";
+        //String user = "webdev2";
+        //String pass = "Nm0JS9J_b!9X";
     
     
         try{
-            myConn = DriverManager.getConnection("", user, pass);
+            //Get a connection to a database
+            myConn = DriverManager.getConnection("jdbc:mysql://den1.mysql3.gear.host:3306/webdev2?user=webdev2&password=Nm0JS9J_b!9X");
         
+            
+            System.out.println("connected?");
                  
+            //Create a statement
             myStmt = myConn.createStatement();
         
-            myRs = myStmt.executeQuery("select * from questions");
+            //Execute SQL query 
+            myRs = myStmt.executeQuery("select * from products");
         
+            //Process Model and Price Columns 
             while (myRs.next()) {
-                System.out.println(myRs.getString("")+ "" + myRs.getString("Question_one"));
+                System.out.println(myRs.getString("Model")+ ", " + myRs.getString("Price"));
             }
         } catch (Exception exc){
             exc.printStackTrace();
