@@ -240,10 +240,33 @@ public class GameGUI extends javax.swing.JFrame {
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
         // TODO add your handling code here:
         Random rd=new Random();
-        int result=rd.nextInt(6);
-        result++;
+        int number1;
+        int number2;
         
-        JOptionPane.showMessageDialog(null, "You rolled a "+result+". Please advance to your square");
+        
+        
+        number1 = rd.nextInt(6);
+        System.out.println("Player one rolled " + number1 + "");
+        number2 = rd.nextInt(6);
+        System.out.println("Player two rolled " + number2 + "");
+            
+        if(number1>number2){
+            System.out.println("Player One goes first");
+        }
+        else if(number2>number1){
+            System.out.println("Player two goes first");
+        }else{
+            System.out.println("Pleas roll again");
+        }
+                
+                
+        //int result=rd.nextInt(6);
+        //result++;
+        
+             
+    
+        
+        //JOptionPane.showMessageDialog(null, "You rolled a "+result+". Please advance to your square");
         //switch
         /*switch(result){
             case 1:
