@@ -256,7 +256,7 @@ public class GameGUI extends javax.swing.JFrame {
         else if(number2>number1){
             System.out.println("Player two goes first");
         }else{
-            System.out.println("Pleas roll again");
+            System.out.println("Please roll again");
         }
                 
                 
