@@ -13,13 +13,17 @@ import javax.swing.JOptionPane;
  * @author x17124719
  */
 public class GameGUI extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form GameGUI
      */
     public GameGUI() {
         initComponents();
     }
+    int player1Total = 0;
+    int player2Total = 0;
+    boolean player1Turn = true;
+    ArrayList<Object> boardArray = new ArrayList<>();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,72 +38,96 @@ public class GameGUI extends javax.swing.JFrame {
         player2Lbl = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         questionTa = new javax.swing.JTextArea();
-        square15Lbl = new javax.swing.JLabel();
-        square16Lbl = new javax.swing.JLabel();
-        square1Lbl = new javax.swing.JLabel();
-        square2Lbl = new javax.swing.JLabel();
-        square3Lbl = new javax.swing.JLabel();
-        square4Lbl = new javax.swing.JLabel();
-        square5Lbl = new javax.swing.JLabel();
-        square6Lbl = new javax.swing.JLabel();
-        square7Lbl = new javax.swing.JLabel();
-        square8Lbl = new javax.swing.JLabel();
-        square9Lbl = new javax.swing.JLabel();
-        square10Lbl = new javax.swing.JLabel();
-        square11Lbl = new javax.swing.JLabel();
-        square12Lbl = new javax.swing.JLabel();
-        square13Lbl = new javax.swing.JLabel();
-        square14Lbl = new javax.swing.JLabel();
-        square17Lbl = new javax.swing.JLabel();
-        square18Lbl = new javax.swing.JLabel();
+        squareLbl15 = new javax.swing.JLabel();
+        squareLbl16 = new javax.swing.JLabel();
+        squareLbl1 = new javax.swing.JLabel();
+        squareLbl2 = new javax.swing.JLabel();
+        squareLbl3 = new javax.swing.JLabel();
+        squareLbl4 = new javax.swing.JLabel();
+        squareLbl5 = new javax.swing.JLabel();
+        squareLbl6 = new javax.swing.JLabel();
+        squareLbl7 = new javax.swing.JLabel();
+        squareLbl8 = new javax.swing.JLabel();
+        squareLbl9 = new javax.swing.JLabel();
+        squareLbl10 = new javax.swing.JLabel();
+        squareLbl11 = new javax.swing.JLabel();
+        squareLbl12 = new javax.swing.JLabel();
+        squareLbl13 = new javax.swing.JLabel();
+        squareLbl14 = new javax.swing.JLabel();
+        squareLbl17 = new javax.swing.JLabel();
+        squareLbl18 = new javax.swing.JLabel();
         rollBtn = new javax.swing.JButton();
         diceLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         player1Lbl.setText("Player1");
+        getContentPane().add(player1Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         player2Lbl.setText("Player2");
+        getContentPane().add(player2Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, -1));
 
         questionTa.setColumns(20);
         questionTa.setRows(5);
         jScrollPane2.setViewportView(questionTa);
 
-        square15Lbl.setText("Square15");
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 432, 192));
 
-        square16Lbl.setText("Square16");
+        squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        squareLbl15.setToolTipText("");
+        getContentPane().add(squareLbl15, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, -1, -1));
 
-        square1Lbl.setText("Square1");
+        squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl16, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, -1, -1));
 
-        square2Lbl.setText("Square2");
+        squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, -1, -1));
 
-        square3Lbl.setText("Square3");
+        squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, -1, -1));
 
-        square4Lbl.setText("Square4");
+        squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, -1, -1));
 
-        square5Lbl.setText("Square5");
+        squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
 
-        square6Lbl.setText("Square6");
+        squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, -1, -1));
 
-        square7Lbl.setText("Square7");
+        squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
-        square8Lbl.setText("Square8");
+        squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
 
-        square9Lbl.setText("Square9");
+        squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
-        square10Lbl.setText("Square10");
+        squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
 
-        square11Lbl.setText("Square11");
+        squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
-        square12Lbl.setText("Square12");
+        squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
-        square13Lbl.setText("Square13");
+        squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
 
-        square14Lbl.setText("Square14");
+        squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
 
-        square17Lbl.setText("Square17");
+        squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, -1, -1));
 
-        square18Lbl.setText("Square18");
+        squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, -1, -1));
+
+        squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
+        getContentPane().add(squareLbl18, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, -1, -1));
 
         rollBtn.setText("Roll");
         rollBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -107,139 +135,68 @@ public class GameGUI extends javax.swing.JFrame {
                 rollBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(rollBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, -1, -1));
 
         diceLbl.setText("jLabel1");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(square9Lbl))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(square7Lbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(square8Lbl, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addComponent(square6Lbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(player1Lbl)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(square10Lbl)
-                                .addGap(43, 43, 43)
-                                .addComponent(square11Lbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(square12Lbl)
-                                .addGap(45, 45, 45)
-                                .addComponent(square13Lbl)
-                                .addGap(48, 48, 48)
-                                .addComponent(square14Lbl)
-                                .addGap(46, 46, 46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(diceLbl)
-                                        .addGap(77, 77, 77)
-                                        .addComponent(rollBtn)
-                                        .addGap(214, 214, 214)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(square16Lbl)
-                                    .addComponent(square15Lbl)
-                                    .addComponent(square17Lbl)
-                                    .addComponent(square18Lbl))
-                                .addGap(0, 6, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(player2Lbl)
-                        .addGap(37, 37, 37))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(square5Lbl)
-                .addGap(62, 62, 62)
-                .addComponent(square4Lbl)
-                .addGap(76, 76, 76)
-                .addComponent(square3Lbl)
-                .addGap(63, 63, 63)
-                .addComponent(square2Lbl)
-                .addGap(54, 54, 54)
-                .addComponent(square1Lbl)
-                .addGap(45, 45, 45))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(player1Lbl)
-                    .addComponent(player2Lbl))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(square14Lbl)
-                    .addComponent(square13Lbl)
-                    .addComponent(square12Lbl)
-                    .addComponent(square11Lbl)
-                    .addComponent(square10Lbl))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(square9Lbl)
-                                .addGap(46, 46, 46)
-                                .addComponent(square8Lbl)
-                                .addGap(5, 5, 5))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(square15Lbl)
-                                .addGap(48, 48, 48)
-                                .addComponent(square16Lbl)))
-                        .addGap(41, 41, 41)
-                        .addComponent(square7Lbl)
-                        .addGap(54, 54, 54)
-                        .addComponent(square6Lbl)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(square17Lbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(square18Lbl)
-                        .addGap(57, 57, 57))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rollBtn)
-                            .addComponent(diceLbl))
-                        .addGap(29, 29, 29)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(square1Lbl)
-                    .addComponent(square2Lbl)
-                    .addComponent(square3Lbl)
-                    .addComponent(square4Lbl)
-                    .addComponent(square5Lbl))
-                .addGap(33, 33, 33))
-        );
+        getContentPane().add(diceLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
-        // TODO add your handling code here:
-        Random rd=new Random();
+        // TODO add your handling code here:                        
+        //for(int i=0;i<19;i++){
+        //    boardArray.add("squareLbl"+i+".setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/gameapp/images/GameSquareEmpty (2).png\")));");
+            //Object squareLbl1 = (String)boardArray.get(i);
+            //boardArray.get(1).setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));;
+            //System.out.println(boardArray.get(i));
+        //} 
+        /*
+        squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+        */
+        
+        //System.out.println(boardArray.get(player1Total));    
+        /*Random rd=new Random();
+        int player1;
+        int player2;
+        
+        
+        
+        player1 = rd.nextInt(6);
+        System.out.println("Player one rolled " + player1 + "");
+        player2 = rd.nextInt(6);
+        System.out.println("Player two rolled " + player2 + "");
+            
+        if(player1>player2){
+            System.out.println("Player One goes first");
+        }
+        else if(player2>player1){
+            System.out.println("Player two goes first");
+        }else{
+            System.out.println("Please roll again");
+        }*/
+        
+        
+        
+        /* CHOOSE WHICH PLAYER GOES FIRST
+         Random rd=new Random();
         int number1;
         int number2;
         
@@ -258,15 +215,613 @@ public class GameGUI extends javax.swing.JFrame {
         }else{
             System.out.println("Please roll again");
         }
-                
-                
-        //int result=rd.nextInt(6);
-        //result++;
         
-             
+        
     
         
-        //JOptionPane.showMessageDialog(null, "You rolled a "+result+". Please advance to your square");
+        */
+        
+        
+        
+        
+        
+        
+        
+        if(player1Turn){
+            Random rd=new Random();
+            int result=rd.nextInt(6)+1;            
+            JOptionPane.showMessageDialog(null, "Player 1 rolled a "+result+". Please advance to your square");                                    
+            switch(player1Total){
+                case 1 : if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 2: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 3: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 4: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 5: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 6: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 7: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 8: if(player1Total == player2Total){
+                squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 9: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 10: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 11: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 12: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 13: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 14: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 15: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 16: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 17: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 18: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+            }
+            player1Total += result;            
+            switch(player1Total){
+                case 1 : if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 2: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 3: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 4: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 5: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 6: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 7: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 8: if(player1Total == player2Total){
+                squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 9: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 10: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 11: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 12: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 13: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 14: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 15: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 16: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 17: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+                
+                case 18: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
+                }
+                break;
+            }
+            
+            player1Turn = false;
+        }
+        else{
+            Random rd=new Random();
+            int result=rd.nextInt(6)+1;                        
+            JOptionPane.showMessageDialog(null, "Player 2 rolled a "+result+". Please advance to your square");
+            switch(player2Total){
+                case 1 : if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 2: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 3: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 4: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 5: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 6: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 7: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 8: if(player1Total == player2Total){
+                squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 9: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 10: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 11: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 12: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 13: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 14: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 15: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 16: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 17: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+                
+                case 18: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                else{
+                    squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
+                }
+                break;
+            }
+            player2Total += result;            
+            switch(player2Total){
+                case 1 : if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 2: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 3: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 4: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 5: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 6: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 7: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 8: if(player1Total == player2Total){
+                squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 9: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 10: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 11: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 12: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 13: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 14: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 15: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 16: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 17: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+                
+                case 18: if(player1Total == player2Total){
+                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                }
+                else{
+                    squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
+                }
+                break;
+            }
+            player1Turn = true;
+        }        
         //switch
         /*switch(result){
             case 1:
@@ -318,6 +873,9 @@ public class GameGUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GameGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -334,23 +892,23 @@ public class GameGUI extends javax.swing.JFrame {
     private javax.swing.JLabel player2Lbl;
     private javax.swing.JTextArea questionTa;
     private javax.swing.JButton rollBtn;
-    private javax.swing.JLabel square10Lbl;
-    private javax.swing.JLabel square11Lbl;
-    private javax.swing.JLabel square12Lbl;
-    private javax.swing.JLabel square13Lbl;
-    private javax.swing.JLabel square14Lbl;
-    private javax.swing.JLabel square15Lbl;
-    private javax.swing.JLabel square16Lbl;
-    private javax.swing.JLabel square17Lbl;
-    private javax.swing.JLabel square18Lbl;
-    private javax.swing.JLabel square1Lbl;
-    private javax.swing.JLabel square2Lbl;
-    private javax.swing.JLabel square3Lbl;
-    private javax.swing.JLabel square4Lbl;
-    private javax.swing.JLabel square5Lbl;
-    private javax.swing.JLabel square6Lbl;
-    private javax.swing.JLabel square7Lbl;
-    private javax.swing.JLabel square8Lbl;
-    private javax.swing.JLabel square9Lbl;
+    private javax.swing.JLabel squareLbl1;
+    private javax.swing.JLabel squareLbl10;
+    private javax.swing.JLabel squareLbl11;
+    private javax.swing.JLabel squareLbl12;
+    private javax.swing.JLabel squareLbl13;
+    private javax.swing.JLabel squareLbl14;
+    private javax.swing.JLabel squareLbl15;
+    private javax.swing.JLabel squareLbl16;
+    private javax.swing.JLabel squareLbl17;
+    private javax.swing.JLabel squareLbl18;
+    private javax.swing.JLabel squareLbl2;
+    private javax.swing.JLabel squareLbl3;
+    private javax.swing.JLabel squareLbl4;
+    private javax.swing.JLabel squareLbl5;
+    private javax.swing.JLabel squareLbl6;
+    private javax.swing.JLabel squareLbl7;
+    private javax.swing.JLabel squareLbl8;
+    private javax.swing.JLabel squareLbl9;
     // End of variables declaration//GEN-END:variables
 }
