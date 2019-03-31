@@ -387,7 +387,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 2: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -395,7 +395,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 3: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -403,7 +403,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 4: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -411,7 +411,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 5: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -419,7 +419,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 6: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -427,7 +427,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 7: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -443,7 +443,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 9: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -451,7 +451,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 10: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -459,7 +459,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 11: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -467,7 +467,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 12: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -475,7 +475,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 13: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -483,7 +483,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 14: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -491,7 +491,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 15: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -499,7 +499,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 16: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -507,7 +507,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 17: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -515,7 +515,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 18: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -685,7 +685,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 2: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -693,7 +693,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 3: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -701,7 +701,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 4: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -709,7 +709,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 5: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -717,7 +717,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 6: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -725,7 +725,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 7: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -741,7 +741,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 9: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -749,7 +749,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 10: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -757,7 +757,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 11: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -765,7 +765,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 12: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -773,7 +773,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 13: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -781,7 +781,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 14: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -789,7 +789,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 15: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -797,7 +797,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 16: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -805,7 +805,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 17: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -813,7 +813,7 @@ public class GameGUI extends javax.swing.JFrame {
                 break;
                 
                 case 18: if(player1Total == player2Total){
-                squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
+                squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
                 }
                 else{
                     squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
