@@ -16,7 +16,7 @@ public class GameApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GameGUI gameApp = new GameGUI();
+        WelcomeGUI gameApp = new WelcomeGUI();
         gameApp.setVisible(true);
     }
     
