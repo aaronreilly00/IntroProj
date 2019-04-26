@@ -202,7 +202,126 @@ public class GameGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
-        
+ArrayList<String> questions = new ArrayList<String>();
+        ArrayList<String> answers = new ArrayList<String>();
+
+        questions.add("Who was the legendary Benedictine monk who invented champagne?");
+        questions.add("Name the largest freshwater lake in the world?");
+        questions.add("Where would you find the Sea of Tranquility?");
+        questions.add("What is someone who shoes horses called?");
+        questions.add("What item of clothing was named after its Scottish inventor?");
+        questions.add("What kind of weapon is a falchion?");
+        questions.add("Which word goes before vest, beans and quartet?");
+        questions.add("What is another word for lexicon?");
+        questions.add("Name the seventh planet from the sun.");
+        questions.add("Who invented the rabies vaccination?");
+        questions.add("Which is the only American state to begin with the letter p?");
+        questions.add("Name the world biggest island");
+        questions.add("What is the worlds longest river?");
+        questions.add("Name the worlds largest ocean.");
+        questions.add("What is the diameter of Earth?");
+        questions.add("Where would you find the worlds most ancient forest?");
+        questions.add("What is the capital city of Spain?");
+        questions.add("Which country is Prague in?','Czech Republic");
+        questions.add("Which English town was a forerunner of the Parks Movement and the first city in Europe to have a street tram system?");
+        questions.add("Name the actor who starred in 142 films including The Quiet Man, The Shootist, The Searchers and Stagecoach.");
+        questions.add("Name the film noir actress who starred in I Married a Witch, The Glass Key, So Proudly We Hail! and Sullivans Travels");
+        questions.add("What is the oldest film ever made?','Roundhay Garden Scene");
+        questions.add("Which actress has won the most Oscars?");
+        questions.add("Which actress said, 'Fasten your seatbelts. Its going to be a bumpy night' in All About Eve?");
+        questions.add("Name the director of the Lord of the Rings trilogy.");
+        questions.add("Who played Neo in The Matrix?");
+        questions.add("Name the actress whose career began at the age of 3, and who went on to star in films such as Contact, Maverick and The Silence of the Lambs?");
+        questions.add("Bray Studios, near Windsor in Berkshire, was home to which famous brand of horror films?");
+        questions.add("In which film did Humphrey Bogart say, 'We will always have Paris?'");
+        questions.add("By what name is Lancelot Brown more usually known?");
+        questions.add("Name the world famous gardens situated ten miles outside of London, close to the River Thames.");
+        questions.add("Which popular gardener created Barnsdale Gardens and was the author of many books such as The Ornamental Kitchen Garden, Gardeners World, Practical Gardening Course and Paradise Gardens?'");
+        questions.add("Which garden is considered to be among the Seven Wonders of the Ancient World?");
+        questions.add("What colour is a Welsh poppy?");
+        questions.add("What colour is a Himalayan poppy?");
+        questions.add("Name the organic gardener who is almost as famous for his long blond plait as he is for his books such as Going Organic and The Gourmet Gardener and his regular appearances on the BBC radios Gardeners Question Time.");
+        questions.add("Give the alternative name for a Mountain Ash tree.");
+        questions.add("Which kind of bulbs were once exchanged as a form of currency?");
+        questions.add("By which Latin name was Rosa Gallica previously known?");
+        questions.add("What colour jersey is worn by the winners of each stage of the Tour De France?");
+        questions.add("Name the only heavyweight boxing champion to finish his career of 49 fights without ever having been defeated?");
+        questions.add("Which sport does Constantino Rocca play?");
+        questions.add("Name the country where you would find the Cresta Run.");
+        questions.add("How many times was the Mens Tennis Singles at Wimbledon won by Bjorn Borg?");
+        questions.add("In 2011, which country hosted a Formula 1 race for the first time?");
+        questions.add("Name the game played on a lawn called a 'crown green'.");
+        questions.add("Which chess piece can only move diagonally?");
+        questions.add("Name the only footballer to have played for Liverpool, Everton, Manchester City and Manchester United.");
+        questions.add("In football, who was nicknamed 'The Divine Ponytail'?");
+        questions.add("How many valves does a trumpet have?");
+
+        answers.add("Dom Perignon");
+        answers.add("Lake Superior");
+        answers.add("The Moon");
+        answers.add("A farrier");
+        answers.add("A Mackintosh");
+        answers.add("A sword");
+        answers.add("String");
+        answers.add("Dictionary");
+        answers.add("Uranus");
+        answers.add("Louis Pasteur");
+        answers.add("Pennsylvania");
+        answers.add("Greenland");
+        answers.add("'Amazon");
+        answers.add("'Pacific");
+        answers.add("8000 miles");
+        answers.add("Australia");
+        answers.add("Madrid");
+        answers.add("Czech Republic");
+        answers.add("Birkenhead");
+        answers.add("John Wayne");
+        answers.add("Veronica Lake");
+        answers.add("Roundhay Garden Scene");
+        answers.add("Katharine Hepburn");
+        answers.add("Bette Davis");
+        answers.add("Peter Jackson");
+        answers.add("Keanu Reeves");
+        answers.add("Jodie Foster");
+        answers.add("Hammer Horror");
+        answers.add("Casablanca");
+        answers.add("Capability Brown");
+        answers.add("Kew Gardens");
+        answers.add("Geoff Hamilton");
+        answers.add("The Hanging Gardens of Babylon");
+        answers.add("Yellow'");
+        answers.add("Blue");
+        answers.add("Bob Flowerdew");
+        answers.add("Rowan");
+        answers.add("Tulips");
+        answers.add("Rosa Mundi");
+        answers.add("Yellow");
+        answers.add("Rocky Marciano");
+        answers.add("Golf");
+        answers.add("Switzerland");
+        answers.add("Five");
+        answers.add("India");
+        answers.add("Bowls");
+        answers.add("A bishop");
+        answers.add("Peter Beardsley");
+        answers.add("Roberto Baggio");
+        answers.add("Three");
+
+        String answer;
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 1; j++) {
+                questionTa.append(questions.get(i) + "\n");
+                answer = JOptionPane.showInputDialog(null, "");
+
+                if (answer.contains(answers.get(j))) {
+                    JOptionPane.showMessageDialog(null, "Right Answer");
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Wrong answer");
+                }
+
+            }
+        }        
 
 
 
