@@ -20,9 +20,7 @@ public class DBConnection {
         Statement myStmt = null;
         ResultSet myRs = null;
     
-        //String user = "webdev2";
-        //String pass = "Nm0JS9J_b!9X";
-    
+        
     
         try{
             //Get a connection to a database
@@ -35,11 +33,11 @@ public class DBConnection {
             myStmt = myConn.createStatement();
         
             //Execute SQL query 
-            myRs = myStmt.executeQuery("select * from products");
+            myRs = myStmt.executeQuery("select * from QUESTIONS");
         
             //Process Model and Price Columns 
             while (myRs.next()) {
-                System.out.println(myRs.getString("Model")+ ", " + myRs.getString("Price"));
+                System.out.println(myRs.getString("question")); //+ ", " + myRs.getString("answer"));
             }
         } catch (Exception exc){
             exc.printStackTrace();

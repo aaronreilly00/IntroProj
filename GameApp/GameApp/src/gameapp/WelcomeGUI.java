@@ -10,12 +10,11 @@ package gameapp;
  * @author x17124719
  */
 public class WelcomeGUI extends javax.swing.JFrame {
-
     /**
      * Creates new form WelcomeGUI
      */
     public WelcomeGUI() {
-        initComponents();
+        initComponents(); 
     }
 
     /**
@@ -28,9 +27,10 @@ public class WelcomeGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         startBtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         startBtn.setText("Start");
         startBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -38,31 +38,13 @@ public class WelcomeGUI extends javax.swing.JFrame {
                 startBtnActionPerformed(evt);
             }
         });
+        getContentPane().add(startBtn);
+        startBtn.setBounds(410, 270, 100, 25);
 
-        jLabel1.setText("Welcome");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(startBtn)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel1)))
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
-                .addComponent(startBtn)
-                .addGap(77, 77, 77))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/diceImage.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 620, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -71,7 +53,9 @@ public class WelcomeGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         GameGUI boardGUI = new GameGUI();
+        boardGUI.setSize(810,600);
         boardGUI.setVisible(true);
+        boardGUI.setLocationRelativeTo(null);
     }//GEN-LAST:event_startBtnActionPerformed
 
     /**
@@ -110,7 +94,7 @@ public class WelcomeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton startBtn;
     // End of variables declaration//GEN-END:variables
 }

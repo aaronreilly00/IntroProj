@@ -13,16 +13,18 @@ import javax.swing.JOptionPane;
  * @author x17124719
  */
 public class GameGUI extends javax.swing.JFrame {
-    
     /**
      * Creates new form GameGUI
      */
     public GameGUI() {
-        initComponents();
-        player1=JOptionPane.showInputDialog(null,"Enter player 1 name");
+        initComponents();       
+        player1=JOptionPane.showInputDialog(null,"Enter first player name");
         player1Lbl.setText(player1);
-        player2=JOptionPane.showInputDialog(null,"Enter player 2 name");
-        player2Lbl.setText(player2);
+        player2=JOptionPane.showInputDialog(null,"Enter second player name");
+        player2Lbl.setText(player2); 
+         
+        randPlayerBtn.setVisible(true);
+        rollBtn.setVisible(false);
     }
     
     int player1Total = 0;
@@ -34,6 +36,8 @@ public class GameGUI extends javax.swing.JFrame {
     String player2;
 
     boolean player1Turn = true;
+    
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -67,77 +71,100 @@ public class GameGUI extends javax.swing.JFrame {
         squareLbl17 = new javax.swing.JLabel();
         squareLbl18 = new javax.swing.JLabel();
         rollBtn = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        randPlayerBtn = new javax.swing.JButton();
+        startGameBtn = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         player1Lbl.setText("Player1");
-        getContentPane().add(player1Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(player1Lbl);
+        player1Lbl.setBounds(20, 20, 36, 15);
 
         player2Lbl.setText("Player2");
-        getContentPane().add(player2Lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, -1));
+        getContentPane().add(player2Lbl);
+        player2Lbl.setBounds(750, 20, 36, 15);
 
         questionTa.setColumns(20);
         questionTa.setRows(5);
         jScrollPane2.setViewportView(questionTa);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 432, 192));
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(210, 130, 432, 192);
 
         squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
         squareLbl15.setToolTipText("");
-        getContentPane().add(squareLbl15, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, -1, -1));
+        getContentPane().add(squareLbl15);
+        squareLbl15.setBounds(680, 100, 81, 61);
 
         squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl16, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, -1, -1));
+        getContentPane().add(squareLbl16);
+        squareLbl16.setBounds(680, 200, 81, 61);
 
         squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, -1, -1));
+        getContentPane().add(squareLbl1);
+        squareLbl1.setBounds(580, 470, 81, 61);
 
         squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, -1, -1));
+        getContentPane().add(squareLbl2);
+        squareLbl2.setBounds(480, 470, 81, 61);
 
         squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, -1, -1));
+        getContentPane().add(squareLbl3);
+        squareLbl3.setBounds(370, 470, 81, 61);
 
         squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
+        getContentPane().add(squareLbl4);
+        squareLbl4.setBounds(260, 470, 81, 61);
 
         squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, -1, -1));
+        getContentPane().add(squareLbl5);
+        squareLbl5.setBounds(150, 470, 81, 61);
 
         squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
+        getContentPane().add(squareLbl6);
+        squareLbl6.setBounds(60, 380, 81, 61);
 
         squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
+        getContentPane().add(squareLbl7);
+        squareLbl7.setBounds(60, 290, 81, 61);
 
         squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+        getContentPane().add(squareLbl8);
+        squareLbl8.setBounds(60, 200, 81, 61);
 
         squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        getContentPane().add(squareLbl9);
+        squareLbl9.setBounds(60, 110, 81, 61);
 
         squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
+        getContentPane().add(squareLbl10);
+        squareLbl10.setBounds(150, 20, 81, 61);
 
         squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        getContentPane().add(squareLbl11);
+        squareLbl11.setBounds(260, 20, 81, 61);
 
         squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+        getContentPane().add(squareLbl12);
+        squareLbl12.setBounds(370, 20, 81, 61);
 
         squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, -1, -1));
+        getContentPane().add(squareLbl13);
+        squareLbl13.setBounds(490, 20, 81, 61);
 
         squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, -1, -1));
+        getContentPane().add(squareLbl14);
+        squareLbl14.setBounds(590, 20, 81, 61);
 
         squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 290, -1, -1));
+        getContentPane().add(squareLbl17);
+        squareLbl17.setBounds(680, 290, 81, 61);
 
         squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png"))); // NOI18N
-        getContentPane().add(squareLbl18, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, -1, -1));
+        getContentPane().add(squareLbl18);
+        squareLbl18.setBounds(680, 380, 81, 61);
 
         rollBtn.setText("Roll");
         rollBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -145,16 +172,41 @@ public class GameGUI extends javax.swing.JFrame {
                 rollBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(rollBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, -1, -1));
+        getContentPane().add(rollBtn);
+        rollBtn.setBounds(380, 410, 70, 25);
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, -1, -1));
+        randPlayerBtn.setText("Press To See Who Goes First");
+        randPlayerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                randPlayerBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(randPlayerBtn);
+        randPlayerBtn.setBounds(320, 340, 210, 25);
+
+        startGameBtn.setText("Start Game");
+        startGameBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startGameBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(startGameBtn);
+        startGameBtn.setBounds(370, 370, 100, 23);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/blue.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 810, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
-        // TODO add your handling code here:                        
+        
+
+
+
+    // TODO add your handling code here:                        
         //for(int i=0;i<19;i++){
         //    boardArray.add("squareLbl"+i+".setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/gameapp/images/GameSquareEmpty (2).png\")));");
             //Object squareLbl1 = (String)boardArray.get(i);
@@ -390,7 +442,7 @@ public class GameGUI extends javax.swing.JFrame {
             player1Total += result;
             if(player1Total >= 18){
                 player1Total = 18;
-                JOptionPane.showMessageDialog(null,"Player1 wins");
+                JOptionPane.showMessageDialog(null,"Congratulations. Player 1 is the winner!");
                 System.exit(0);
             }
             System.out.println("Player 1 new: " + player1Total);            
@@ -695,7 +747,7 @@ public class GameGUI extends javax.swing.JFrame {
             player2Total += result;
             if(player2Total >= 18){
                 player2Total = 18;
-                JOptionPane.showMessageDialog(null,"Player 2 wins");
+                JOptionPane.showMessageDialog(null,"Congratulations. Player 2 is the winner!");
                 System.exit(0);
             }
             System.out.println("Player 2 new: " + player2Total);
@@ -870,6 +922,19 @@ public class GameGUI extends javax.swing.JFrame {
                            
     }//GEN-LAST:event_rollBtnActionPerformed
 
+    private void randPlayerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_randPlayerBtnActionPerformed
+        // TODO add your handling code here:
+        String names[] = {player1Lbl.getText(), player2Lbl.getText()};
+        JOptionPane.showMessageDialog(null, names[new Random().nextInt(names.length)]+ " will be player 1. Please press button below to begin");
+    }//GEN-LAST:event_randPlayerBtnActionPerformed
+
+    private void startGameBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameBtnActionPerformed
+        // TODO add your handling code here:
+        randPlayerBtn.setVisible(false);
+        startGameBtn.setVisible(false);
+        rollBtn.setVisible(true);
+    }//GEN-LAST:event_startGameBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -911,11 +976,12 @@ public class GameGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel player1Lbl;
     private javax.swing.JLabel player2Lbl;
     private javax.swing.JTextArea questionTa;
+    private javax.swing.JButton randPlayerBtn;
     private javax.swing.JButton rollBtn;
     private javax.swing.JLabel squareLbl1;
     private javax.swing.JLabel squareLbl10;
@@ -935,5 +1001,6 @@ public class GameGUI extends javax.swing.JFrame {
     private javax.swing.JLabel squareLbl7;
     private javax.swing.JLabel squareLbl8;
     private javax.swing.JLabel squareLbl9;
+    private javax.swing.JRadioButton startGameBtn;
     // End of variables declaration//GEN-END:variables
 }

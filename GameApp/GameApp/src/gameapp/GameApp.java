@@ -5,6 +5,8 @@
  */
 package gameapp;
 
+
+
 /**
  *
  * @author x17124719
@@ -17,7 +19,9 @@ public class GameApp {
     public static void main(String[] args) {
         // TODO code application logic here
         WelcomeGUI gameApp = new WelcomeGUI();
+        gameApp.setSize(626,391);
         gameApp.setVisible(true);
+        gameApp.setLocationRelativeTo(null);
     }
     
 }
