@@ -31,9 +31,10 @@ public class GameGUI extends javax.swing.JFrame {
     int player2Total = 0;
     boolean playerBlueTurn;
     boolean playerRedTurn;
+    boolean answerCorrect;
     ArrayList<Object> boardArray = new ArrayList<>();
     String player1;
-    String player2;
+    String player2;    
 
     boolean player1Turn = true;
     
@@ -204,7 +205,8 @@ public class GameGUI extends javax.swing.JFrame {
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
 ArrayList<String> questions = new ArrayList<String>();
         ArrayList<String> answers = new ArrayList<String>();
-
+        
+        //Adding questions to the quesiton array
         questions.add("Who was the legendary Benedictine monk who invented champagne?");
         questions.add("Name the largest freshwater lake in the world?");
         questions.add("Where would you find the Sea of Tranquility?");
@@ -256,6 +258,7 @@ ArrayList<String> questions = new ArrayList<String>();
         questions.add("In football, who was nicknamed 'The Divine Ponytail'?");
         questions.add("How many valves does a trumpet have?");
 
+        //Adding the Answers to the answer array
         answers.add("Dom Perignon");
         answers.add("Lake Superior");
         answers.add("The Moon");
@@ -308,110 +311,33 @@ ArrayList<String> questions = new ArrayList<String>();
         answers.add("Three");
 
         String answer;
+        //Loop to get question and take answer
         for (int i = 0; i < 1; i++) {
+            Random rd=new Random();
+            int qNum=rd.nextInt(questions.size())+1;            
             for (int j = 0; j < 1; j++) {
-                questionTa.append(questions.get(i) + "\n");
-                answer = JOptionPane.showInputDialog(null, "");
-
-                if (answer.contains(answers.get(j))) {
+                questionTa.append(questions.get(qNum) + "\n");
+                System.out.println(answers.get(qNum));
+                answer = JOptionPane.showInputDialog(null, "");                
+                if (answer.contains(answers.get(qNum))) {
                     JOptionPane.showMessageDialog(null, "Right Answer");
-
+                    answerCorrect = true;
                 } else {
                     JOptionPane.showMessageDialog(null, "Wrong answer");
+                    answerCorrect = false;
                 }
-
             }
-        }        
-
-
-
-    // TODO add your handling code here:                        
-        //for(int i=0;i<19;i++){
-        //    boardArray.add("squareLbl"+i+".setIcon(new javax.swing.ImageIcon(getClass().getResource(\"/gameapp/images/GameSquareEmpty (2).png\")));");
-            //Object squareLbl1 = (String)boardArray.get(i);
-            //boardArray.get(1).setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));;
-            //System.out.println(boardArray.get(i));
-        //} 
-        /*
-        squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        squareLbl18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareEmpty (2).png")));
-        */
-        
-        //System.out.println(boardArray.get(player1Total));    
-        /*Random rd=new Random();
-        int player1;
-        int player2;
-        
-        
-        
-        player1 = rd.nextInt(6);
-        System.out.println("Player one rolled " + player1 + "");
-        player2 = rd.nextInt(6);
-        System.out.println("Player two rolled " + player2 + "");
-            
-        if(player1>player2){
-            System.out.println("Player One goes first");
-        }
-        else if(player2>player1){
-            System.out.println("Player two goes first");
-        }else{
-            System.out.println("Please roll again");
-        }*/
-        
-        
-        
-        /*CHOOSE WHICH PLAYER GOES FIRST
-         Random rd=new Random();
-        int number1;
-        int number2;
-        
-        
-        
-        number1 = rd.nextInt(6);
-        System.out.println("Player one rolled " + number1 + "");
-        number2 = rd.nextInt(6);
-        System.out.println("Player two rolled " + number2 + "");
-            
-        if(number1>number2){
-            System.out.println("Player One goes first");
-        }
-        else if(number2>number1){
-            System.out.println("Player two goes first");
-        }else{
-            System.out.println("Please roll again");
-        }
-        
-        
-    
-        
-        */
-        
-        
-        
-        
-        
-        
-        
+        }    
+      
+      //Runs if the answer is correct
+      if(answerCorrect){ 
+          //Player 1 game loop
         if(player1Turn){
             Random rd=new Random();
             int result=rd.nextInt(6)+1;            
-            JOptionPane.showMessageDialog(null, "Player 1 rolled a "+result+". Please advance to your square");                                    
+            JOptionPane.showMessageDialog(null, "Player 1 rolled a "+result+". Please advance to your square");
+            
+            //Switch statement to remove previous game piece
             switch(player1Total){
                 case 1 : if(player1Total == player2Total){
                 squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBlueToken.png")));
@@ -564,7 +490,9 @@ ArrayList<String> questions = new ArrayList<String>();
                 JOptionPane.showMessageDialog(null,"Congratulations. Player 1 is the winner!");
                 System.exit(0);
             }
-            System.out.println("Player 1 new: " + player1Total);            
+            System.out.println("Player 1 new: " + player1Total);
+            
+            //Updates game board with new location for game piece for player 1
             switch(player1Total){
                 case 1 : if(player1Total == player2Total){
                 squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
@@ -717,6 +645,8 @@ ArrayList<String> questions = new ArrayList<String>();
             Random rd=new Random();
             int result=rd.nextInt(6)+1;            
             JOptionPane.showMessageDialog(null, "Player 2 rolled a "+result+". Please advance to your square");
+            
+            //Removes old location for player 2
             switch(player2Total){
                 case 1 : if(player1Total == player2Total){
                 squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareRedToken.png")));
@@ -870,6 +800,8 @@ ArrayList<String> questions = new ArrayList<String>();
                 System.exit(0);
             }
             System.out.println("Player 2 new: " + player2Total);
+            
+            //Update player2 to new location
             switch(player2Total){
                 case 1 : if(player1Total == player2Total){
                 squareLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gameapp/images/GameSquareBothTokens.png")));
@@ -1016,29 +948,8 @@ ArrayList<String> questions = new ArrayList<String>();
                 break;
             }
             player1Turn = true;
-        }        
-        //switch
-        /*switch(result){
-            case 1:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice1.png")));
-                break;
-            case 2:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice2.png")));
-                break;
-            case 3:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice3.png")));
-                break;
-            case 4:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice4.png")));
-                break;
-            case 5:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice5.png")));
-                break;
-            case 6:
-                diceLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dice6.png")));
-                break;
-        }*/
-                           
+        }  
+       }                                   
     }//GEN-LAST:event_rollBtnActionPerformed
 
     private void randPlayerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_randPlayerBtnActionPerformed
